@@ -1,0 +1,4 @@
+@baseurl = http://localhost:3000/api/products
+
+### GET ALL ORDERS ###
+GET {{baseurl}} HTTP/1.1
