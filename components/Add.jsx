@@ -9,6 +9,7 @@ import {
   getDownloadURL,
 } from "firebase/storage";
 import app from "../util/firebase";
+import { NEXT_URL } from "../util/rootUrl";
 
 const Add = ({ setClose }) => {
   const [file, setFile] = useState(null);
@@ -81,7 +82,7 @@ const Add = ({ setClose }) => {
         img: URL,
       };
 
-      await axios.post("http://localhost:3000/api/products", newProduct);
+      await axios.post(NEXT_URL + "/api/products", newProduct);
       setClose(true);
     };
   };
