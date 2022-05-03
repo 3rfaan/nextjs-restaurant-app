@@ -128,8 +128,12 @@ export const getServerSideProps = async (ctx) => {
     };
   }
 
-  const productRes = await axios.get(NEXT_URL + "/api/products");
-  const orderRes = await axios.get(NEXT_URL + "/api/orders");
+  const productRes = await axios.get(
+    "https://nextjs-restaurant-app.vercel.app/api/products"
+  );
+  const orderRes = await axios.get(
+    "https://nextjs-restaurant-app.vercel.app//api/orders"
+  );
 
   return {
     props: {
